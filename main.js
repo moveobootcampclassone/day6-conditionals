@@ -47,11 +47,6 @@ if (rating !== 3) {
   console.log("The rating is 3");
 }
 
-function describeColor(color) {
-  switch (color) {
-  }
-}
-
 // using else if and else
 function getColor(sign) {
   if (sign === "stop" || sign === "flower") {
@@ -66,3 +61,89 @@ function getColor(sign) {
 getColor("stop1"); // will print "purple"
 getColor("flower"); // will print "red"
 getColor("go"); // will print "green"
+
+//Solution for ex7 of conditionals
+function myFunction() {
+  let person = prompt("Please enter your name");
+  console.log(typeof person, "type of person");
+  //it is like: if (person !== ""), not empty is truthy
+  if (person) {
+    document.getElementById("demo").innerHTML =
+      "Hello " + person + "! How are you today?";
+    //document.write("Hello " + person + "! How are you today?")
+  } else {
+    document.getElementById("demo").innerHTML =
+      "Hello friend! How are you today?";
+  }
+}
+
+//Switch case
+//check if number is 2 or 3 or 5 and console.log the result
+function test2(num) {
+  let secondNum = num * 2 + 8;
+  switch (secondNum) {
+    // similar to if (num === 2 => do something)
+    case 2:
+      console.log("The number is 2!");
+      // break;
+      // We cause this key word to make sure it don't check
+      // the rest cases (exits the switch case)
+      return;
+    // we can use "return" if we want to exit the function
+    case 3:
+      console.log("The number is 3!");
+      return;
+    case 5:
+      console.log("The number is 5!");
+      return;
+    default:
+      console.log("The number is none of them");
+    // break;
+  }
+  console.log("I wonder that number it is");
+  // return;
+}
+
+// if (5 === 5) {
+//   console.log("hey");
+// } else if (5 === 5) {
+//   console.log("hey2");
+// }
+
+test2(6);
+
+// We can use combine cases
+// switch (num) {
+//   case 2:
+//   case 3:
+//     console.log("the number is 2 or 3");
+//     break;
+//   case 5:
+//     console.log("the number is 5");
+//     break;
+// }
+
+// let num = 20;
+// let text;
+// if (num > 18) {
+//   text = "Yes";
+// } else if (num == 18) text = "Wow";
+// else "Too young";
+
+//Ternery condition
+const text1 = num > 18 ? "Yes" : "Too Young";
+const text2 = num > 18 ? "Yes" : num === 18 ? "WoW!" : "Too young";
+// const el = num > 18 ? <div>Hello Old Person!</div> : <p>Youngggg</p>;
+
+function askAge() {
+  let age = prompt("Please enter your age"); // result of prompt is always a string
+  let ageToCheck = parseInt(age);
+  console.log(ageToCheck, "ageToCheck");
+  if (isNaN(ageToCheck)) {
+    return alert("you tricked me!");
+  }
+  let textToDisplay =
+    ageToCheck > 18 ? "Yes" : ageToCheck === 18 ? "WoW!" : "Too young";
+  document.write(textToDisplay);
+  return;
+}
