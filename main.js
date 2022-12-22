@@ -62,20 +62,6 @@ getColor("stop1"); // will print "purple"
 getColor("flower"); // will print "red"
 getColor("go"); // will print "green"
 
-//Solution for ex7 of conditionals
-function myFunction() {
-  let person = prompt("Please enter your name");
-  //it is like: if (person !== ""), not empty is truthy
-  if (person) {
-    document.getElementById("demo").innerHTML =
-      "Hello " + person + "! How are you today?";
-    //document.write("Hello " + person + "! How are you today?")
-  } else {
-    document.getElementById("demo").innerHTML =
-      "Hello friend! How are you today?";
-  }
-}
-
 //Switch case
 //check if number is 2 or 3 or 5 and console.log the result
 function test2(num) {

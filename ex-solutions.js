@@ -1,3 +1,18 @@
+//Solution for ex1.7 of conditionals
+function myFunction() {
+  let person = prompt("Please enter your name");
+  //it is like: if (person !== ""), not empty is truthy
+  if (person) {
+    document.write("Hello " + person + "! How are you today?");
+  } else {
+    document.write("Hello " + person + "! How are you today?");
+  }
+  // in w3schools they used getElementById("demo").innerHTML
+  //to inject text into the demo element (<p id="demo"></p>)
+  // document.getElementById("demo").innerHTML =
+  //   "Hello " + person + "! How are you today?";
+}
+
 //Ex1.10
 function calculate(num1, num2, operator) {
   if (operator === "+") {
