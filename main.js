@@ -65,7 +65,6 @@ getColor("go"); // will print "green"
 //Solution for ex7 of conditionals
 function myFunction() {
   let person = prompt("Please enter your name");
-  console.log(typeof person, "type of person");
   //it is like: if (person !== ""), not empty is truthy
   if (person) {
     document.getElementById("demo").innerHTML =
@@ -85,20 +84,20 @@ function test2(num) {
     // similar to if (num === 2 => do something)
     case 2:
       console.log("The number is 2!");
-      // break;
-      // We cause this key word to make sure it don't check
-      // the rest cases (exits the switch case)
-      return;
+    // break;
+    // We cause this key word to make sure it don't check
+    // the rest cases (exits the switch case)
+    // return;
     // we can use "return" if we want to exit the function
     case 3:
       console.log("The number is 3!");
-      return;
+    // return;
     case 5:
       console.log("The number is 5!");
-      return;
+    // return;
     default:
       console.log("The number is none of them");
-    // break;
+      break;
   }
   console.log("I wonder that number it is");
   // return;
