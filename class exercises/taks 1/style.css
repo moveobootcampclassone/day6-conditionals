@@ -1,0 +1,8 @@
+nav ul {
+  /* complete the missing style */
+  display: flex;
+  background-color: antiquewhite;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
